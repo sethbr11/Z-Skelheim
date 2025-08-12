@@ -29,7 +29,7 @@ From the Icelandic words _skel_ (“shell”) and _heim_ (“home”), meaning �
 1. Clone the repository:
 
    ```sh
-   git clone <repository-url> ~/.zsh/
+   git clone https://github.com/sethbr11/Z-Skelheim.git ~/.zsh/
    ```
 
 2. Copy the example script files:
