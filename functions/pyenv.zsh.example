@@ -1,0 +1,24 @@
+#!/bin/zsh
+
+function pyenv() {
+    local DEFAULT_ENV_PATH="$HOME/.pyenv"
+    declare -A PRESET_PATHS=(
+        # ["NAME_HERE]="$HOME/Your/Path/venv"
+        # ["ANOTHER_PATH]="/src/venv"
+    )
+
+    local ENV_PATH="${1:-$DEFAULT_ENV_PATH}"  # Use argument if provided, otherwise default path
+
+    # Check if the argument matches a preset path
+    if [[ -n "${PRESET_PATHS[$ENV_PATH]}" ]]; then
+        ENV_PATH="${PRESET_PATHS[$ENV_PATH]}"
+    fi
+
+    if [[ -d "$ENV_PATH" ]]; then
+        echo "> Activating Python environment: $ENV_PATH"
+        source "$ENV_PATH/bin/activate"
+    else
+        echo "Error: Python environment not found at $ENV_PATH"
+        return 1
+    fi
+}

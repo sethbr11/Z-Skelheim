@@ -1,0 +1,6 @@
+aliases.zsh
+exports.zsh
+functions/workon.zsh
+functions/pyenv.zsh
+
+.DS_Store

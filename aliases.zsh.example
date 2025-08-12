@@ -1,0 +1,5 @@
+# Output all of the git plugin options
+alias git-aliases="alias | grep 'git\ '"
+
+# Restart the shell
+alias reload="exec $SHELL -l"

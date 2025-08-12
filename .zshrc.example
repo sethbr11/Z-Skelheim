@@ -1,0 +1,15 @@
+# Source aliases, environmental variables, plugins, etc.
+for file in ~/.zsh/*.zsh; do
+    source "$file"
+done
+
+# Import custom functions
+for file in ~/.zsh/functions/*.zsh; do
+    source "$file"
+done
+
+# Import oh-my-zsh settings
+source $ZSH/oh-my-zsh.sh
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
